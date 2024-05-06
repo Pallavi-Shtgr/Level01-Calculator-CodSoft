@@ -1,54 +1,92 @@
-.calc-body {
-    width: 275px;
-    margin: auto;
-    min-height: 400px;
-    box-shadow: 0 8px 50px -7px black;
-    background: #3A4655;
-}
-/*Calculator Display Screen*/
-.calc-screen {
-    padding: 1rem;
-}
-#calc-operation {
-    font-size: 1.3rem;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+  }
+  body {
+    height: 90vh;
+    background-color: #dadff7;
+  }
+  .calculator {
+    width: 400px;
+    background-color: #071013;
+    padding: 50px 30px 20px 30px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(0, 5, 24, 0.4);
+  }
+  .display {
+    width: 60%;
+  }
+  .display input {
+    width: 70%;
+    padding: 10px 5px;
     text-align: right;
-    color: #727B86;
-    padding-bottom: .5rem;
-}
-#calc-typed {
-    font-size: 2rem;
-    text-align: right;
-    color: #fff;
-}
-/*Calculator Buttons*/
-.calc-button-row{
-    display: table;
-}
-.calc-button-row button {
-    display: table-cell;
-    width: 25%;
-    background: #425062;
-    color: #fff;
-    height: 65px;
-    font-size: 1.3rem;
     border: none;
-    border-color:#3C4857;
-    border-width: 1px 1px 0px 0;
-    border-style: solid;
-}
-.calc-button-row button.ac {
-    color: #ff7665;
-}
-.calc-button-row button.opt {
-    color: #ffbc56;
-}
-.calc-button-row button:nth-child(4n){
-    border-right: none;
-}
-.calc-button-row button:active {
-    position: relative;
-    top: 1px;
-}
-.calc-button-row button:hover {
-    background: #3e4b5c;
-}
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 35px;
+  }
+  .display input::placeholder {
+    color: #9490ac;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    margin-top: 40px;
+  }
+  button {
+    font-size: 20px;
+    padding: 17px;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+    border-radius: 10px;
+  }
+  
+  button#equal {
+    grid-row: span 2;
+  }
+  button#zero {
+    grid-column: span 2;
+  }
+  
+  .operation-button {
+    background-color: #a26501;
+  }
+  
+  .operation-button:hover {
+    background-color: #614a03db;
+  }
+  
+  .digit-button {
+    background-color: #313131;
+  }
+  
+  .digit-button:hover {
+    background-color: #272626a8;
+  }
+  
+  .main {
+    margin-top: 10%;
+  }
+  
+  .brand {
+    text-align: center;
+    color: rgb(255, 255, 254);
+  }
+  /* a {
+    color: rgb(123, 97, 9);
+    font-weight: 800;
+  } */
+  /* a:hover {
+    color: #f69906;
+  } */
+  
